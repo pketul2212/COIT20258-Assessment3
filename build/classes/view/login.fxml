@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/24.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="controller.LoginController"
+            prefWidth="720" prefHeight="480"
+            style="-fx-background-color: white;">
+
+    <!-- Header -->
+    <top>
+        <VBox spacing="8" alignment="CENTER_LEFT" style="-fx-padding: 24 24 8 24;">
+            <Text text="TakeCare" fill="#007f72" style="-fx-font-size: 26; -fx-font-weight: bold;"/>
+            <Text text="Telehealth System" style="-fx-font-size: 14; -fx-fill: #666;"/>
+        </VBox>
+    </top>
+
+    <!-- Content -->
+    <center>
+        <VBox alignment="CENTER" spacing="16">
+            <TabPane prefWidth="540" tabClosingPolicy="UNAVAILABLE">
+                <!-- LOGIN TAB -->
+                <tabs>
+                    <Tab text="Login">
+                        <content>
+                            <VBox spacing="12" alignment="CENTER_LEFT" style="-fx-padding: 24;">
+                                <Label text="Email Address"/>
+                                <TextField fx:id="usernameField" promptText="Enter your email" prefWidth="500"/>
+
+                                <Label text="Password"/>
+                                <PasswordField fx:id="passwordField" promptText="Enter your password" prefWidth="500"/>
+
+                                <HBox spacing="12" alignment="CENTER_RIGHT" prefWidth="500">
+                                    <Region HBox.hgrow="ALWAYS"/>
+                                    <Button fx:id="loginButton" text="Log In" onAction="#handleLogin"
+                                            style="-fx-background-color: #007f72; -fx-text-fill: white; -fx-font-weight: bold;"/>
+                                </HBox>
+                            </VBox>
+                        </content>
+                    </Tab>
+
+                    <!-- REGISTER TAB -->
+                    <Tab text="Register">
+                        <content>
+                            <VBox spacing="12" alignment="CENTER_LEFT" style="-fx-padding: 24;">
+                                <Label text="Full Name"/>
+                                <TextField fx:id="fullNameField" promptText="John Doe" prefWidth="500"/>
+
+                                <Label text="Email Address"/>
+                                <TextField fx:id="emailRegField" promptText="name@example.com" prefWidth="500"/>
+
+                                <Label text="Password"/>
+                                <PasswordField fx:id="passwordRegField" promptText="Create a password" prefWidth="500"/>
+
+                                <Label text="Confirm Password"/>
+                                <PasswordField fx:id="confirmPasswordRegField" promptText="Re-enter password" prefWidth="500"/>
+
+                                <HBox spacing="12" alignment="CENTER_RIGHT" prefWidth="500">
+                                    <Region HBox.hgrow="ALWAYS"/>
+                                    <Button text="Sign Up" onAction="#handleSignUp"
+                                            style="-fx-background-color: #007f72; -fx-text-fill: white; -fx-font-weight: bold;"/>
+                                </HBox>
+                            </VBox>
+                        </content>
+                    </Tab>
+                </tabs>
+            </TabPane>
+        </VBox>
+    </center>
+
+</BorderPane>
