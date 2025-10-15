@@ -1,9 +1,12 @@
 # 🩺 Telehealth System (THS)
 
 ## Team Details
-Ketul Pareshbhai Patel – 12262547
-Thitichuda Uechitarporn – 12270885
-Parth Lalajibhai  Patel – 12281818 
+| Name | StudentID |
+|------------|----------|
+| Ketul Pareshbhai Patel | 12262547  |
+| Thitichuda Uechitarporn | 12270885 |
+| Parth Lalajibhai Patel | 12281818  |
+
 
 ## ⚙️ System Requirements
 
