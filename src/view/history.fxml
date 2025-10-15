@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.VBox?>
+
+<!-- Minimal & version-agnostic FXML for History screen -->
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="controller.HistoryController"
+      spacing="16" alignment="CENTER"
+      prefWidth="900" prefHeight="600">
+
+    <children>
+        <Label text="Patient Appointment History" style="-fx-font-size:22; -fx-font-weight:bold;"/>
+
+        <TableView fx:id="appointmentTable" prefWidth="820" prefHeight="460">
+            <columns>
+                <TableColumn fx:id="patientCol"    text="Patient"     prefWidth="200"/>
+                <TableColumn fx:id="specialistCol" text="Specialist"  prefWidth="220"/>
+                <TableColumn fx:id="dateCol"       text="Date/Time"   prefWidth="200"/>
+                <TableColumn fx:id="reasonCol"     text="Reason"      prefWidth="200"/>
+            </columns>
+        </TableView>
+    </children>
+</VBox>
